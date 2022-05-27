@@ -1,5 +1,4 @@
-require 'httparty'
+require_relative 'src/client'
+include Client
 
-res = HTTParty.get("https://api.revolt.chat/", headers={"x-session-token": ""})
-
-puts res.body
+Client::run(token="token here", bot=FALSE)
